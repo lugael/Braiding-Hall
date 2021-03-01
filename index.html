@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Braiding Hall</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="java.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+    <header class="menu-principal">
+      <main>
+        <div class="logo">
+          <img src="logo.jpeg">
+        </div>
+      </main>
+    </header>
+     <div class="tab">
+      <button class="tablinks" onclick="selecao(event, 'CadastroCliente')">Cadastro cliente</button>
+      <button class="tablinks" onclick="selecao(event, 'CadastroSalas')">Cadastro salas de treinamento</button>
+      <button class="tablinks" onclick="selecao(event, 'CadastroCafe')">Cadastro  espaço café</button>
+      <button class="tablinks" onclick="selecao(event, 'Pesquisa')">Pesquisas</button>
+
+    </div>
+
+    <div id="CadastroCliente" class="tabcontent">
+      <h3>Cadastro cliente</h3>
+      <form>
+        <label for="Pnome">Nome:</label><br>
+        <input type="text" id="Pnome" name="Pnome"><br>
+        <label for="Snome">Sobrenome:</label><br>
+        <input type="text" id="Snome" name="Snome"><br>
+        <label>
+          <input type="button" onclick="cadastrarCliente()" value="enviar">
+        </label>
+      </form>
+    </div>
+
+    <div id="CadastroSalas" class="tabcontent">
+      <h3>Cadastro salas de treinamento</h3>
+      <form>
+        <label for="Sala">Nome da Sala:</label><br>
+        <input type="text" id="Sala" name="Sala"><br>
+        <input type="number" id="lotacaoS" name="lotacaoS" min="19" max="20"><br>
+        <label>
+          <input type="button" onclick="cadastrarNsala()" value="enviar">
+        </label>
+      </form>
+    </div>
+
+    <div id="CadastroCafe" class="tabcontent">
+      <h3>Cadastro espaço café</h3>
+      <form>
+        <label for="Ecafe">Espaço Cafe:</label><br>
+        <input type="text" id="Ncafe" name="Ncafe"><br>
+        <input type="number" id="lotacaoCf" name="lotacaoCf" min="19" max="20"><br>
+        <label>
+          <input type="button" onclick="cadastrarEcafe()" value="enviar">
+        </label>
+      </form>
+    </div>
+    <div id="Pesquisa" class="tabcontent">
+     <div class="tab">
+      <form>
+       <label>
+        <label for="Buscacliente">cliente:</label>
+        <label>
+          <input type="text" id="txt" onblur="Bcliente()" />
+        </label>
+       </label><br>
+     </form>
+      <form>
+       <label>
+        <label for="Buscarsaladeeventos">Sala de eventos:</label>
+        <label>
+          <input type="text" id="txt" onblur="Bsala()" />
+        </label>
+       </label><br>
+      </form>
+      <form>
+       <label>
+        <label for="Buscarespaçocafé">Buscar espaço café:</label>
+        <label>
+          <input type="text" id="txt" onblur="Bespaco()" />
+        </label>
+       </label><br>
+      </form>
+     </div>
+   </div>
+
+  </div>
+ </body>
+
+</html>
